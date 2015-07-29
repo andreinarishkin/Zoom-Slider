@@ -1,0 +1,202 @@
+{
+	"manifest_name" : 
+	{
+		"message" : "Zoom Slider",
+		"description" : "Manifest JSON name string"
+	},
+	"manifest_description" : 
+	{
+		"message" : "Adjust zoom and get instant feedback about zoom level",
+		"description" : "Manifest JSON description string"
+	},
+	"manifest_defaultTitle" : 
+	{
+		"message" : "Zoom Slider",
+		"description" : "Manifest JSON default title string"
+	},
+	"notification_install_title" : 
+	{
+		"message" : "Zoom Slider has been installed",
+		"description" : "Notification install"
+	},
+	"notification_install_body" : 
+	{
+		"message" : "Please, take a look at the Settings!",
+		"description" : "Notification install"
+	},
+	"notification_update_title" : 
+	{
+		"message" : "Zoom Slider has been updated",
+		"description" : "Notification install"
+	},
+	"notification_update_body" : 
+	{
+		"message" : "Please, take a look at the Settings to find out what's new!",
+		"description" : "Notification install"
+	},
+	"settings_sidebar_menuitem_settings" : 
+	{
+		"message" : "Settings",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_help" : 
+	{
+		"message" : "Help",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_changelog" : 
+	{
+		"message" : "Changelog",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_credits" : 
+	{
+		"message" : "Credits",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_incognito_header" : 
+	{
+		"message" : "Private mode",
+		"description" : "Incognito header"
+	},
+	"settings_content_incognito_info" : 
+	{
+		"message" : "If you want to use this extension in private mode, you have to activate in manualy in the Extension manager.",
+		"description" : "Incognito body"
+	},
+	"settings_content_incognito_extensions" : 
+	{
+		"message" : "Open Extension manager",
+		"description" : "Incognito body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Shortcuts",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_info" : 
+	{
+		"message" : "Alt+Shift+Z is the default shortcut to open the popup. You can change it in the Keyboard shortcuts dialog. (Esc is the default shortcut to close the popup.)",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Open Keyboard shortcut manager",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_howToUse_header" : 
+	{
+		"message" : "How to use",
+		"description" : "How to use header"
+	},
+	"settings_content_howToUse_default" : 
+	{
+		"message" : "You can use any method to zoom the page. You will see the zoom value on the button.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_keyboard" : 
+	{
+		"message" : "When the popup is open, you can also use the left/down arrows to zoom out and the right/up arrows to zoom in.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_mouse" : 
+	{
+		"message" : "When the popup is open, you can also use your mouse to move the slider, or scroll the wheel over the popup.",
+		"description" : "How to use body"
+	},
+	"settings_content_notes_header" : 
+	{
+		"message" : "Notes",
+		"description" : "Notes header"
+	},
+	"settings_content_notes_doesNotWork" : 
+	{
+		"message" : "This extension can not change the zoom level on the internal browser pages and the Opera addon catalog. This is an Opera policy.",
+		"description" : "Notes body"
+	},
+	"settings_content_notes_performance" : 
+	{
+		"message" : "The browser may not be able to zoom the page as quickly as you change the zoom on the slider. It depends on your available hardware resources.",
+		"description" : "Notes body"
+	},
+	"settings_content_credits_header" : 
+	{
+		"message" : "Credits",
+		"description" : "Credits header"
+	},
+	"settings_content_credits_createdBy" : 
+	{
+		"message" : "Zoom Slider is created by <a href=\"http://tothrobert.ininet.hu\" target=\"_blank\">Robert Toth</a>.",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_copyCode" : 
+	{
+		"message" : "Besides my own coding I use some layout and style from the internal pages made by Opera Software ASA.",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_thanks" : 
+	{
+		"message" : "Thanks for every contributor! <em>(See the changelog for details!)</em>",
+		"description" : "Credits body"
+	},
+	"settings_content_warning_header" : 
+	{
+		"message" : "Warning",
+		"description" : "Warning header"
+	},
+	"settings_content_warning_notResponsible" : 
+	{
+		"message" : "This extension was not made by Opera Software ASA. The company is not responsible for any of the errors.",
+		"description" : "Warning body"
+	},
+	"settings_content_license_header" : 
+	{
+		"message" : "License",
+		"description" : "License header"
+	},
+	"settings_content_license_share" : 
+	{
+		"message" : "You can share this extension, but I ask you to link the download page instead of copying the NEX file.",
+		"description" : "License body"
+	},
+	"settings_content_license_copy" : 
+	{
+		"message" : "You can copy and modify the code of this extension as long as it's free and you use the proper credits.",
+		"description" : "License body"
+	},
+	"settings_content_contact_header" : 
+	{
+		"message" : "Contact",
+		"description" : "Contact header"
+	},
+	"settings_content_contact_feedback1" : 
+	{
+		"message" : "Opera Addon Catalog",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_feedback2" : 
+	{
+		"message" : ">GitHub",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_email" : 
+	{
+		"message" : "Email",
+		"description" : "Contact body"
+	},
+	"settings_content_permissions_header" : 
+	{
+		"message" : "Permissions",
+		"description" : "Permissions header"
+	},
+	"settings_content_permissions_notifications" : 
+	{
+		"message" : "The extension needs permission to use notifications to inform you about updates.",
+		"description" : "Permissions body"
+	},
+	"settings_content_permissions_tabs" : 
+	{
+		"message" : "The extension needs permission to access your tabs so you can control the zoom level with it.",
+		"description" : "Permissions body"
+	}
+}

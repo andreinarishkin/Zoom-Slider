@@ -1,0 +1,202 @@
+{
+	"manifest_name" : 
+	{
+		"message" : "Zoom Csúszka",
+		"description" : "Manifest JSON name string"
+	},
+	"manifest_description" : 
+	{
+		"message" : "Szabályozza a nagyítást, és azonnali visszajelzést ad az értékéről",
+		"description" : "Manifest JSON description string"
+	},
+	"manifest_defaultTitle" : 
+	{
+		"message" : "Zoom Csúszka",
+		"description" : "Manifest JSON default title string"
+	},
+	"notification_install_title" : 
+	{
+		"message" : "A Zoom Csúszka beépült a böngészőbe",
+		"description" : "Notification install"
+	},
+	"notification_install_body" : 
+	{
+		"message" : "Kérlek, nézz szét a beállításokban!",
+		"description" : "Notification install"
+	},
+	"notification_update_title" : 
+	{
+		"message" : "A Zoom Csúszka frissült",
+		"description" : "Notification install"
+	},
+	"notification_update_body" : 
+	{
+		"message" : "Kérlek, nézz szét a beállításokban az újdonságokért!",
+		"description" : "Notification install"
+	},
+	"settings_sidebar_menuitem_settings" : 
+	{
+		"message" : "Beállítások",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_help" : 
+	{
+		"message" : "Súgó",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_changelog" : 
+	{
+		"message" : "Változáslista",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_credits" : 
+	{
+		"message" : "Névjegy",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_incognito_header" : 
+	{
+		"message" : "Privát mód",
+		"description" : "Incognito header"
+	},
+	"settings_content_incognito_info" : 
+	{
+		"message" : "Ha privát módban is használni akarod ezt a bővítményt, akkor engedélyezned kell a Bővítmények lapon.",
+		"description" : "Incognito body"
+	},
+	"settings_content_incognito_extensions" : 
+	{
+		"message" : "Bővítménykezelő megnyitása",
+		"description" : "Incognito body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Billentyűparancsok",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_info" : 
+	{
+		"message" : "Alt+Shift+Z az alapértelmezett billentyűkombináció a buborék kinyitásához. A kombinációt meg tudod változtatni a Billentyűparancsok párbeszédablakban. (Az Esc billentyűvel pedig be tudod zárni a buborékot.)",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Billentyűparancsok megnyitása",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_howToUse_header" : 
+	{
+		"message" : "Így használd",
+		"description" : "How to use header"
+	},
+	"settings_content_howToUse_default" : 
+	{
+		"message" : "Használhatod bármelyik elérhető módszert a nagyításhoz. A nagyítás értékét azonnal látni fogod az eszköztár gombján.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_keyboard" : 
+	{
+		"message" : "Ha a buborék nyitva van, akkor a használhatod még a balra/le nyilakat a nagyítás csökkentéséhez és a jobbra/fel nyilakat a nagyítás növeléséhez.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_mouse" : 
+	{
+		"message" : "Ha a buborék nyitva van, akkor az egeret is használhatod a csúszka mozgatásához, vagy görgethetsz a buborék fölött.",
+		"description" : "How to use body"
+	},
+	"settings_content_notes_header" : 
+	{
+		"message" : "Megjegyzések",
+		"description" : "Notes header"
+	},
+	"settings_content_notes_doesNotWork" : 
+	{
+		"message" : "A bővítmény nem működik a böngésző belső lapjain és az Opera bővítmény katalógusában. Ez egy Operás korlátozás.",
+		"description" : "Notes body"
+	},
+	"settings_content_notes_performance" : 
+	{
+		"message" : "A böngésző nem biztos, hogy olyan gyorsan tudja változtatni az oldal nagyítását, amilyen gyorsan te változtatod az értéket a csúszkán. Ez az elérhető hardveres erőforrásaidtól függ.",
+		"description" : "Notes body"
+	},
+	"settings_content_credits_header" : 
+	{
+		"message" : "Névjegy",
+		"description" : "Credits header"
+	},
+	"settings_content_credits_createdBy" : 
+	{
+		"message" : "Fejlesztő: <a href=\"http://tothrobert.ininet.hu\" target=\"_blank\">Tóth Róbert</a>",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_copyCode" : 
+	{
+		"message" : "Az általam írt kódon kívül az Opera belső lapjait felépítő kódok egy részét is felhasználtam.",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_thanks" : 
+	{
+		"message" : "Köszönet mindenkinek, aki hozzájárult a bővítményhez. <em>(A részleteket lásd a Változáslistában!)</em>",
+		"description" : "Credits body"
+	},
+	"settings_content_warning_header" : 
+	{
+		"message" : "Figyelem",
+		"description" : "Warning header"
+	},
+	"settings_content_warning_notResponsible" : 
+	{
+		"message" : "Ez a bővítmény nem az Opera Software ASA terméke. A cég nem felelős a bővítmény esetleges hibáiért.",
+		"description" : "Warning body"
+	},
+	"settings_content_license_header" : 
+	{
+		"message" : "Licenc",
+		"description" : "License header"
+	},
+	"settings_content_license_share" : 
+	{
+		"message" : "Szabadon terjesztheted a bővítményt, de arra kérlek, hogy ne a NEX fájlt másold, hanem a letöltési oldal linkjét.",
+		"description" : "License body"
+	},
+	"settings_content_license_copy" : 
+	{
+		"message" : "Szabadon másolhatod és módosíthatod a bővítmény forráskódját mindaddig, amíg nem kérsz érte pénzt, és megfelelően hivatkozol a forrásra.",
+		"description" : "License body"
+	},
+	"settings_content_contact_header" : 
+	{
+		"message" : "Kapcsolat",
+		"description" : "Contact header"
+	},
+	"settings_content_contact_feedback1" : 
+	{
+		"message" : "Opera Addon Katalógus",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_feedback2" : 
+	{
+		"message" : "GitHub",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_email" : 
+	{
+		"message" : "Email",
+		"description" : "Contact body"
+	},
+	"settings_content_permissions_header" : 
+	{
+		"message" : "Engedélyek",
+		"description" : "Permissions header"
+	},
+	"settings_content_permissions_notifications" : 
+	{
+		"message" : "A bővítmény azért kér hozzáférést az értesítésekhez, hogy jelezni tudja, ha frissítés érkezik.",
+		"description" : "Permissions body"
+	},
+	"settings_content_permissions_tabs" : 
+	{
+		"message" : "A bővítmény azért kér hozzáférést a lapfülekhez, hogy szabályozni tudja az oldalak nagyítását.",
+		"description" : "Permissions body"
+	}
+}
