@@ -96,7 +96,7 @@
 	},
 	"settings_content_howToUse_keyboard" : 
 	{
-		"message" : "Ha a buborék nyitva van, akkor a használhatod még a balra/le nyilakat a nagyítás csökkentéséhez és a jobbra/fel nyilakat a nagyítás növeléséhez.",
+		"message" : "Ha a buborék nyitva van, akkor használhatod még a balra/le nyilakat a nagyítás csökkentéséhez és a jobbra/fel nyilakat a nagyítás növeléséhez.",
 		"description" : "How to use body"
 	},
 	"settings_content_howToUse_mouse" : 
@@ -119,6 +119,16 @@
 		"message" : "A böngésző nem biztos, hogy olyan gyorsan tudja változtatni az oldal nagyítását, amilyen gyorsan te változtatod az értéket a csúszkán. Ez az elérhető hardveres erőforrásaidtól függ.",
 		"description" : "Notes body"
 	},
+	"settings_content_permissions_notifications" : 
+	{
+		"message" : "A bővítmény azért kér hozzáférést az értesítésekhez, hogy jelezni tudja, ha frissítés érkezik.",
+		"description" : "Permissions body"
+	},
+	"settings_content_permissions_tabs" : 
+	{
+		"message" : "A bővítmény azért kér hozzáférést a lapfülekhez, hogy szabályozni tudja az oldalak nagyítását.",
+		"description" : "Permissions body"
+	},
 	"settings_content_credits_header" : 
 	{
 		"message" : "Névjegy",
@@ -126,7 +136,7 @@
 	},
 	"settings_content_credits_createdBy" : 
 	{
-		"message" : "Fejlesztő: <a href=\"http://tothrobert.ininet.hu\" target=\"_blank\">Tóth Róbert</a>",
+		"message" : "Fejlesztő:",
 		"description" : "Credits body"
 	},
 	"settings_content_credits_copyCode" : 
@@ -188,15 +198,5 @@
 	{
 		"message" : "Engedélyek",
 		"description" : "Permissions header"
-	},
-	"settings_content_permissions_notifications" : 
-	{
-		"message" : "A bővítmény azért kér hozzáférést az értesítésekhez, hogy jelezni tudja, ha frissítés érkezik.",
-		"description" : "Permissions body"
-	},
-	"settings_content_permissions_tabs" : 
-	{
-		"message" : "A bővítmény azért kér hozzáférést a lapfülekhez, hogy szabályozni tudja az oldalak nagyítását.",
-		"description" : "Permissions body"
 	}
 }

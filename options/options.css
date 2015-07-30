@@ -46,8 +46,10 @@ margin: 0;
 padding: 0;}
 
 nav ul li a {
+display: inline-block;
 color: Black;
-text-decoration: none;}
+text-decoration: none;
+border-bottom: 2px solid Transparent;}
 
 nav ul li a:hover {
 border-bottom: 2px solid LightGrey;}
@@ -60,7 +62,7 @@ main {
 display: block;
 box-sizing: border-box;
 float: right;
-padding: 20px 20px 20px 20px;
+padding: 0 20px 20px 20px;
 min-height: 100%;
 width: 600px;
 background-color: White;}
@@ -70,21 +72,28 @@ display: none;}
 article.visible {
 display: block;}
 
-hr {
-width: 100%;
-margin: 10px 0 20px 0;
-border: 1px solid LightGrey;}
-
 section {
 overflow: auto;
-margin: 0;}
+margin: 0;
+padding: 20px 0 10px 0;
+border-bottom: 2px solid LightGrey;}
+
+section:last-child {
+border-bottom: none;}
 
 section h2 {
 font-size: 1.1rem;
 font-weight: normal;
 letter-spacing: 2px;
-margin: 0;
+margin: 0 0 10px 0;
 padding: 0;}
 
 section ul {
-padding: 0px 0px 0px 20px;}
+padding: 0px 0px 0px 20px;
+margin: 0 0 10px 0;}
+
+sectipn p {
+margin: 0 0 10px 0;}
+
+section a {
+margin: 0 0 10px 0;}

@@ -1,18 +1,19 @@
+// throw notification on extension update
 chrome.runtime.onInstalled.addListener(function(details)
 {
 	if (details.reason === "install" || details.reason === "update")
 	{
-		// throw notification
 		var title = chrome.i18n.getMessage("notification_" + details.reason + "_title");
 		var body = chrome.i18n.getMessage("notification_" + details.reason + "_body");
-		var n = new Notification(title,
+		var options = 
 		{
-			tag : "site_settings_sidebar", 
+			tag : "zoom_slider", 
 			dir : "auto",
 			lang : window.navigator.language,
 			icon : "icons/icon48.png", 
 			body : body
-		});
+		};
+		var n = new Notification(title, options);
 		n.onclick = function()
 		{
 			chrome.runtime.openOptionsPage();
@@ -44,6 +45,7 @@ function disableButton()
 	});
 }
 
+// update browserAction badge
 function getZoom(ZoomChangeInfo)
 {
 	chrome.tabs.getZoom(function(zoomFactor)
@@ -53,6 +55,7 @@ function getZoom(ZoomChangeInfo)
 	});
 }
 
+// catch events when we have to check the zoom level
 window.addEventListener("load", function()
 {
 	disableButton();
@@ -70,7 +73,7 @@ chrome.tabs.onActivated.addListener(function(tab)
 	getZoom();
 });
 
-chrome.tabs.onZoomChange.addListener(function(ZoomChangeInfo)
+chrome.tabs.onZoomChange.addListener(function(zoomChangeInfo)
 {
 	getZoom();
 });

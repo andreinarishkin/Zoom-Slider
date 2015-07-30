@@ -1,7 +1,7 @@
 // stuff to do on page load
 window.addEventListener("DOMContentLoaded", function()
 {
-	// load subpage from hash
+	// load subpage from URL hash
 	var hash = (location.hash) ? location.hash : "#settings";
 	document.querySelector(hash).classList.add("visible");
 	document.querySelector(hash + "-nav").classList.add("selected");
@@ -43,6 +43,7 @@ window.addEventListener("DOMContentLoaded", function()
 		e.preventDefault();
 		chrome.tabs.create({url: "opera://extensions/?id=" + chrome.runtime.id});
 	}, false);
+	
 	document.getElementById("keys").addEventListener("click", function(e)
 	{
 		e.preventDefault();
