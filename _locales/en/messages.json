@@ -34,6 +34,11 @@
 		"message" : "Please, take a look at the Settings to find out what's new!",
 		"description" : "Notification install"
 	},
+	"context_menu_reset" :
+	{
+		"message" : "Reset to default",
+		"description" : "Context menu strings"
+	},
 	"settings_sidebar_menuitem_settings" : 
 	{
 		"message" : "Settings",
@@ -84,12 +89,27 @@
 		"message" : "Open Keyboard shortcut manager",
 		"description" : "Shortcuts body"
 	},
+	"settings_content_zoom_header" : 
+	{
+		"message" : "Default zoom level",
+		"description" : "Zoom header"
+	},
+	"settings_content_zoom_info" : 
+	{
+		"message" : "You can set the default zoom level of the browser in Settings -> Websites -> Page zoom. (It will change the zoom level of every site, including sidebar panels and toolbar popups, but not the UI itself.)",
+		"description" : "Zoom body"
+	},
+	"settings_content_zoom_manager" : 
+	{
+		"message" : "Open Settings",
+		"description" : "Zoom body"
+	},
 	"settings_content_howToUse_header" : 
 	{
 		"message" : "How to use",
 		"description" : "How to use header"
 	},
-	"settings_content_howToUse_default" : 
+	"settings_content_howToUse_builtIn" : 
 	{
 		"message" : "You can use any method to zoom the page. You will see the zoom value on the button.",
 		"description" : "How to use body"
@@ -102,6 +122,11 @@
 	"settings_content_howToUse_mouse" : 
 	{
 		"message" : "When the popup is open, you can also use your mouse to move the slider, or scroll the wheel over the popup.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_default" : 
+	{
+		"message" : "The hollow button indicates the default zoom level of the browser. Click on it to reset zoom to default!",
 		"description" : "How to use body"
 	},
 	"settings_content_notes_header" : 

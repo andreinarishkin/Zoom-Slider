@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function()
 		}, false);
 	}
 	
-	// inject Extensions and KeyConfig page links
+	// inject Extensions, KeyConfig and Settings page links
 	document.getElementById("ext").addEventListener("click", function(e)
 	{
 		e.preventDefault();
@@ -48,5 +48,11 @@ window.addEventListener("DOMContentLoaded", function()
 	{
 		e.preventDefault();
 		chrome.tabs.create({url: "opera://settings/configureCommands"});
+	}, false);
+	
+	document.getElementById("prefs").addEventListener("click", function(e)
+	{
+		e.preventDefault();
+		chrome.tabs.create({url: "opera://settings"});
 	}, false);
 }, false);

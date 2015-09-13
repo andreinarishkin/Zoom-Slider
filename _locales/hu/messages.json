@@ -34,6 +34,11 @@
 		"message" : "Kérlek, nézz szét a beállításokban az újdonságokért!",
 		"description" : "Notification install"
 	},
+	"context_menu_reset" :
+	{
+		"message" : "Alapértelmezett nagyítás",
+		"description" : "Context menu strings"
+	},
 	"settings_sidebar_menuitem_settings" : 
 	{
 		"message" : "Beállítások",
@@ -84,12 +89,27 @@
 		"message" : "Billentyűparancsok megnyitása",
 		"description" : "Shortcuts body"
 	},
+	"settings_content_zoom_header" : 
+	{
+		"message" : "Alapértelmezett nagyítás",
+		"description" : "Zoom header"
+	},
+	"settings_content_zoom_info" : 
+	{
+		"message" : "A Beállítások -> Webhelyek -> Oldal nagyítása menüben meg tudod változtatni a böngésző alapértelmezett nagyítási értékét. (Ezzel minden weboldal nagyítását megváltoztatod, beleértve az oldalsáv paneleket és az eszköztár buborékokat is, de a böngésző felületét nem.)",
+		"description" : "Zoom body"
+	},
+	"settings_content_zoom_manager" : 
+	{
+		"message" : "Beállítások megnyitása",
+		"description" : "Zoom body"
+	},
 	"settings_content_howToUse_header" : 
 	{
 		"message" : "Így használd",
 		"description" : "How to use header"
 	},
-	"settings_content_howToUse_default" : 
+	"settings_content_howToUse_builtIn" : 
 	{
 		"message" : "Használhatod bármelyik elérhető módszert a nagyításhoz. A nagyítás értékét azonnal látni fogod az eszköztár gombján.",
 		"description" : "How to use body"
@@ -102,6 +122,11 @@
 	"settings_content_howToUse_mouse" : 
 	{
 		"message" : "Ha a buborék nyitva van, akkor az egeret is használhatod a csúszka mozgatásához, vagy görgethetsz a buborék fölött.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_default" : 
+	{
+		"message" : "A lyukas gomb a böngésző alapértelmezett nagyítási értékét jelzi. Kattints rá, ha alaphelyzetbe akarod állítani a nagyítást!",
 		"description" : "How to use body"
 	},
 	"settings_content_notes_header" : 
@@ -181,7 +206,7 @@
 	},
 	"settings_content_contact_feedback1" : 
 	{
-		"message" : "Opera Addon Katalógus",
+		"message" : "Opera Bővítmény Katalógus",
 		"description" : "Contact body"
 	},
 	"settings_content_contact_feedback2" : 

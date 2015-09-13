@@ -1,8 +1,26 @@
-// throw notification on extension update
+// do some stuff in install and update
 chrome.runtime.onInstalled.addListener(function(details)
 {
 	if (details.reason === "install" || details.reason === "update")
 	{
+		// insert context menu items into browserAction
+		chrome.contextMenus.create({type: "normal", id: "zoom_slider.reset", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_reset")});
+		chrome.contextMenus.create({type: "separator", id: "zoom_slider.separator", contexts: ["browser_action"]});
+		chrome.contextMenus.onClicked.addListener(function(info, tab)
+		{
+			if (info.menuItemId === "zoom_slider.reset")
+			{
+				chrome.tabs.getZoomSettings(function(zoomSettings)
+				{
+					chrome.tabs.setZoom(zoomSettings.defaultZoomFactor);
+				});
+			}
+		});
+		
+		// update browserAction
+		getZoom(true);
+		
+		// throw notification
 		var title = chrome.i18n.getMessage("notification_" + details.reason + "_title");
 		var body = chrome.i18n.getMessage("notification_" + details.reason + "_body");
 		var options = 
@@ -22,7 +40,7 @@ chrome.runtime.onInstalled.addListener(function(details)
 });
 
 // disable browserAction on pages where extensions are not allowed to run
-function disableButton()
+function handleButton()
 {
 	chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
 	{
@@ -30,50 +48,64 @@ function disableButton()
 		{
 			var protocol = tabs[0].url.slice(0, tabs[0].url.indexOf(":"));
 			if (/addons.opera.com/.test(tabs[0].url) === true)
-			{
+			{ // Opera addon catalog
 				chrome.browserAction.disable(tabs[0].id);
+				chrome.contextMenus.update("zoom_slider.reset", {enabled: false});
 			}
-			else if (protocol === "opera" || protocol === "chrome" || protocol === "browser" || protocol === "chrome-extension")
-			{
+			else if (protocol === "opera" || protocol === "chrome" || protocol === "browser" || protocol === "about" || protocol === "chrome-extension" || protocol === "chrome-devtools")
+			{ // internal pages
 				chrome.browserAction.disable(tabs[0].id);
+				chrome.contextMenus.update("zoom_slider.reset", {enabled: false});
 			}
 			else
 			{
 				chrome.browserAction.enable(tabs[0].id);
+				chrome.contextMenus.update("zoom_slider.reset", {enabled: true});
 			}
 		}
 	});
 }
 
-// update browserAction badge
-function getZoom(ZoomChangeInfo)
+// deal with browserAction
+function getZoom(checkButton)
 {
+	// handle the button
+	if (checkButton === true)
+	{
+		handleButton();
+	}
+	
+	// update the badge
 	chrome.tabs.getZoom(function(zoomFactor)
 	{
-		var zoom = Math.floor(zoomFactor * 100);
-		chrome.browserAction.setBadgeText({text: zoom.toString()});
+		chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+		{
+			if (tabs.length > 0) // chrome-devtools and chrome-extensions don't have tabs
+			{
+				var zoom = Math.round(zoomFactor * 100);
+				chrome.browserAction.setBadgeText({text: zoom.toString(), tabId: tabs[0].id});
+			}
+		});
 	});
 }
 
-// catch events when we have to check the zoom level
-window.addEventListener("load", function()
+// catch events when we have to check the zoom level changes
+chrome.runtime.onStartup.addListener(function(tab) // opening the browser
 {
-	disableButton();
-	getZoom();
-}, false);
-
-chrome.tabs.onUpdated.addListener(function(tab)
-{
-	disableButton();
-	getZoom();
-});
-chrome.tabs.onActivated.addListener(function(tab)
-{
-	disableButton();
-	getZoom();
+	getZoom(true);
 });
 
-chrome.tabs.onZoomChange.addListener(function(zoomChangeInfo)
+chrome.tabs.onUpdated.addListener(function(tab) // navigating from page
 {
-	getZoom();
+	getZoom(true);
+});
+
+chrome.tabs.onActivated.addListener(function(tab) // opening and switching tabs
+{
+	getZoom(true);
+});
+
+chrome.tabs.onZoomChange.addListener(function(zoomChangeInfo) // zooming initiated by the user
+{
+	getZoom(false);
 });
