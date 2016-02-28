@@ -1,4 +1,4 @@
-// do some stuff in install and update
+// do some stuff on install and update
 chrome.runtime.onInstalled.addListener(function(details)
 {
 	if (details.reason === "install" || details.reason === "update")
@@ -6,19 +6,10 @@ chrome.runtime.onInstalled.addListener(function(details)
 		// insert context menu items into browserAction
 		chrome.contextMenus.create({type: "normal", id: "zoom_slider.reset", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_reset")});
 		chrome.contextMenus.create({type: "separator", id: "zoom_slider.separator", contexts: ["browser_action"]});
-		chrome.contextMenus.onClicked.addListener(function(info, tab)
-		{
-			if (info.menuItemId === "zoom_slider.reset")
-			{
-				chrome.tabs.getZoomSettings(function(zoomSettings)
-				{
-					chrome.tabs.setZoom(zoomSettings.defaultZoomFactor);
-				});
-			}
-		});
 		
-		// update browserAction
-		getZoom(true);
+		// check if it needs to be disabled
+		handleButton();
+		getZoom();
 		
 		// throw notification
 		var title = chrome.i18n.getMessage("notification_" + details.reason + "_title");
@@ -36,6 +27,18 @@ chrome.runtime.onInstalled.addListener(function(details)
 		{
 			chrome.runtime.openOptionsPage();
 		};
+	}
+});
+
+// bind context menu click handler
+chrome.contextMenus.onClicked.addListener(function(info, tab)
+{
+	if (info.menuItemId === "zoom_slider.reset")
+	{
+		chrome.tabs.getZoomSettings(function(zoomSettings)
+		{
+			chrome.tabs.setZoom(zoomSettings.defaultZoomFactor);
+		});
 	}
 });
 
@@ -67,14 +70,8 @@ function handleButton()
 }
 
 // deal with browserAction
-function getZoom(checkButton)
+function getZoom()
 {
-	// handle the button
-	if (checkButton === true)
-	{
-		handleButton();
-	}
-	
 	// update the badge
 	chrome.tabs.getZoom(function(zoomFactor)
 	{
@@ -90,22 +87,27 @@ function getZoom(checkButton)
 }
 
 // catch events when we have to check the zoom level changes
-chrome.runtime.onStartup.addListener(function(tab) // opening the browser
+chrome.tabs.onUpdated.addListener(function(tab) // navigating away from page
 {
-	getZoom(true);
-});
-
-chrome.tabs.onUpdated.addListener(function(tab) // navigating from page
-{
-	getZoom(true);
+	handleButton();
+	getZoom();
 });
 
 chrome.tabs.onActivated.addListener(function(tab) // opening and switching tabs
 {
-	getZoom(true);
+	handleButton();
+	getZoom();
+});
+
+chrome.windows.onFocusChanged.addListener(function(windowID) // closing and switching windows
+{
+	if (windowID !== chrome.windows.WINDOW_ID_NONE)
+	{
+		handleButton();
+	}
 });
 
 chrome.tabs.onZoomChange.addListener(function(zoomChangeInfo) // zooming initiated by the user
 {
-	getZoom(false);
+	getZoom();
 });
