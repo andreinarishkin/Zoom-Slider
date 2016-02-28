@@ -144,14 +144,24 @@
 		"message" : "A böngésző nem biztos, hogy olyan gyorsan tudja változtatni az oldal nagyítását, amilyen gyorsan te változtatod az értéket a csúszkán. Ez az elérhető hardveres erőforrásaidtól függ.",
 		"description" : "Notes body"
 	},
+	"settings_content_permissions_header" : 
+	{
+		"message" : "Engedélyek",
+		"description" : "Permissions header"
+	},
+	"settings_content_permissions_contextMenus" : 
+	{
+		"message" : "\"contextMenus\", hogy testre szabja az eszköztár gombjának menüjét.",
+		"description" : "Permissions body"
+	},
 	"settings_content_permissions_notifications" : 
 	{
-		"message" : "A bővítmény azért kér hozzáférést az értesítésekhez, hogy jelezni tudja, ha frissítés érkezik.",
+		"message" : "\"notifications\", hogy jelezni tudja, ha frissítés érkezik.",
 		"description" : "Permissions body"
 	},
 	"settings_content_permissions_tabs" : 
 	{
-		"message" : "A bővítmény azért kér hozzáférést a lapfülekhez, hogy szabályozni tudja az oldalak nagyítását.",
+		"message" : "\"tabs\", hogy szabályozni tudja az oldalak nagyítását.",
 		"description" : "Permissions body"
 	},
 	"settings_content_credits_header" : 
@@ -218,10 +228,5 @@
 	{
 		"message" : "Email",
 		"description" : "Contact body"
-	},
-	"settings_content_permissions_header" : 
-	{
-		"message" : "Engedélyek",
-		"description" : "Permissions header"
 	}
 }
