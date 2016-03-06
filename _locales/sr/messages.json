@@ -1,0 +1,232 @@
+{
+	"manifest_name" : 
+	{
+		"message" : "Zoom Slider",
+		"description" : "Manifest JSON name string"
+	},
+	"manifest_description" : 
+	{
+		"message" : "Подесите зум и примите тренутну повратну информацију о нивоу зумирања",
+		"description" : "Manifest JSON description string"
+	},
+	"manifest_defaultTitle" : 
+	{
+		"message" : "Zoom Slider",
+		"description" : "Manifest JSON default title string"
+	},
+	"notification_install_title" : 
+	{
+		"message" : "Zoom Slider је инсталиран",
+		"description" : "Notification install"
+	},
+	"notification_install_body" : 
+	{
+		"message" : "Погледајте опције!",
+		"description" : "Notification install"
+	},
+	"notification_update_title" : 
+	{
+		"message" : "Zoom Slider је ажуриран",
+		"description" : "Notification install"
+	},
+	"notification_update_body" : 
+	{
+		"message" : "Погледајте опције да бисте сазнали шта је ново!",
+		"description" : "Notification install"
+	},
+	"context_menu_reset" :
+	{
+		"message" : "Врати на подразумевано",
+		"description" : "Context menu strings"
+	},
+	"settings_sidebar_menuitem_settings" : 
+	{
+		"message" : "Подешавања",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_help" : 
+	{
+		"message" : "Помоћ",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_changelog" : 
+	{
+		"message" : "Измене",
+		"description" : "Sidebar menu"
+	},
+	"settings_sidebar_menuitem_credits" : 
+	{
+		"message" : "Заслуге",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_incognito_header" : 
+	{
+		"message" : "Приватни режим",
+		"description" : "Incognito header"
+	},
+	"settings_content_incognito_info" : 
+	{
+		"message" : "Ако желите да користите ово проширење у приватном режиму, морате га активирати ручно у Управљачу проширењима.",
+		"description" : "Incognito body"
+	},
+	"settings_content_incognito_extensions" : 
+	{
+		"message" : "Отвори Управљач проширењима",
+		"description" : "Incognito body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Пречице",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_info" : 
+	{
+		"message" : "Alt+Shift+Z је подразумевана пречица за отварање искачућег прозора. Можете је променити у управљачу тастерским пречицама (Esc је подразумевана пречица за затварање искачућег прозора).",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Отвори Тастерске пречице",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_zoom_header" : 
+	{
+		"message" : "Подразумевани ниво зумирања",
+		"description" : "Zoom header"
+	},
+	"settings_content_zoom_info" : 
+	{
+		"message" : "Можете подесити подразумевани ниво зумирања прегледача у Подешавања -> Веб локација -> Зумирање странице (то ће променити ниво зумирања сваке странице, укључујући панеле бочне траке и искачуће прозоре алатне траке, али не и самог корисничког окружења).",
+		"description" : "Zoom body"
+	},
+	"settings_content_zoom_manager" : 
+	{
+		"message" : "Отвори Подешавања",
+		"description" : "Zoom body"
+	},
+	"settings_content_howToUse_header" : 
+	{
+		"message" : "Како се користи",
+		"description" : "How to use header"
+	},
+	"settings_content_howToUse_builtIn" : 
+	{
+		"message" : "Можете користити било који метод за зумирање странице. Видећете вредност зумирања на дугмету.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_keyboard" : 
+	{
+		"message" : "Када отворите искачући прозор, можете користити стрелице лево/доле како бисте умањили и десно/горе како бисте увећали приказ.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_mouse" : 
+	{
+		"message" : "Када отворите искачући прозор, можете користити и леви тастер миша за померање клизача или окретати точкић преко искачућег прозора.",
+		"description" : "How to use body"
+	},
+	"settings_content_howToUse_default" : 
+	{
+		"message" : "Шупље дугме указује на подразумевани ниво зумирања прегледача. Клик на њега враћа зумирање на подразумевано!",
+		"description" : "How to use body"
+	},
+	"settings_content_notes_header" : 
+	{
+		"message" : "Напомене",
+		"description" : "Notes header"
+	},
+	"settings_content_notes_doesNotWork" : 
+	{
+		"message" : "Ово проширење не може променити ниво зумирања на интерним страницама прегледача и на страницама за преузимање Opera додатака. Ово је безбедносно ограничење Opera прегледача.",
+		"description" : "Notes body"
+	},
+	"settings_content_notes_performance" : 
+	{
+		"message" : "Прегледач можда неће бити у могућности да зумира страницу тако брзо као што ви мењате зум на клизачу. То зависи од хардверских могућности рачунара.",
+		"description" : "Notes body"
+	},
+	"settings_content_permissions_header" : 
+	{
+		"message" : "Дозволе",
+		"description" : "Permissions header"
+	},
+	"settings_content_permissions_contextMenus" : 
+	{
+		"message" : "\"contextMenus\" за прилагођавање менија на дугмету.",
+		"description" : "Permissions body"
+	},
+	"settings_content_permissions_notifications" : 
+	{
+		"message" : "\"notifications\" за коришћење обавештења о ажурирањима.",
+		"description" : "Permissions body"
+	},
+	"settings_content_permissions_tabs" : 
+	{
+		"message" : "\"tabs\" за контролу нивоа зумирања.",
+		"description" : "Permissions body"
+	},
+	"settings_content_credits_header" : 
+	{
+		"message" : "Заслуге",
+		"description" : "Credits header"
+	},
+	"settings_content_credits_createdBy" : 
+	{
+		"message" : "Аутор:",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_copyCode" : 
+	{
+		"message" : "Поред мог сопственог кодирања, користио сам распоред и стил интерних страница Opera прегледача.",
+		"description" : "Credits body"
+	},
+	"settings_content_credits_thanks" : 
+	{
+		"message" : "Хвала свим сарадницима! <em>(Види детаље у изменама!)</em>",
+		"description" : "Credits body"
+	},
+	"settings_content_warning_header" : 
+	{
+		"message" : "Упозорење",
+		"description" : "Warning header"
+	},
+	"settings_content_warning_notResponsible" : 
+	{
+		"message" : "Ово проширење није направљено од стране Opera Software ASA. Компанија није одговорна за било какву грешку.",
+		"description" : "Warning body"
+	},
+	"settings_content_license_header" : 
+	{
+		"message" : "Лиценца",
+		"description" : "License header"
+	},
+	"settings_content_license_share" : 
+	{
+		"message" : "Можете делити ово проширење али вас молим да остављате везу до странице за преузимање уместо копирања NEX датотеке.",
+		"description" : "License body"
+	},
+	"settings_content_license_copy" : 
+	{
+		"message" : "Можете копирати и мењати код овог проширења докле год је бесплатан и прописно упућујете на извор.",
+		"description" : "License body"
+	},
+	"settings_content_contact_header" : 
+	{
+		"message" : "Контакт",
+		"description" : "Contact header"
+	},
+	"settings_content_contact_feedback1" : 
+	{
+		"message" : "Opera проширења",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_feedback2" : 
+	{
+		"message" : "GitHub",
+		"description" : "Contact body"
+	},
+	"settings_content_contact_email" : 
+	{
+		"message" : "Е-пошта",
+		"description" : "Contact body"
+	}
+}
