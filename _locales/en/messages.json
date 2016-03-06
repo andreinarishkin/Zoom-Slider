@@ -144,6 +144,11 @@
 		"message" : "The browser may not be able to zoom the page as quickly as you change the zoom on the slider. It depends on your available hardware resources.",
 		"description" : "Notes body"
 	},
+	"settings_content_permissions_header" : 
+	{
+		"message" : "Permissions",
+		"description" : "Permissions header"
+	},
 	"settings_content_permissions_contextMenus" : 
 	{
 		"message" : "\"contextMenus\" to customize the toolbar button menu.",
@@ -176,7 +181,7 @@
 	},
 	"settings_content_credits_thanks" : 
 	{
-		"message" : "Thanks for every contributor! <em>(See the changelog for details!)</em>",
+		"message" : "Thanks for every contributor! (See the changelog for details!)",
 		"description" : "Credits body"
 	},
 	"settings_content_warning_header" : 

@@ -181,7 +181,7 @@
 	},
 	"settings_content_credits_thanks" : 
 	{
-		"message" : "Хвала свим сарадницима! <em>(Види детаље у изменама!)</em>",
+		"message" : "Хвала свим сарадницима! (Види детаље у изменама!)",
 		"description" : "Credits body"
 	},
 	"settings_content_warning_header" : 

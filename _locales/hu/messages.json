@@ -181,7 +181,7 @@
 	},
 	"settings_content_credits_thanks" : 
 	{
-		"message" : "Köszönet mindenkinek, aki hozzájárult a bővítményhez. <em>(A részleteket lásd a Változáslistában!)</em>",
+		"message" : "Köszönet mindenkinek, aki hozzájárult a bővítményhez. (A részleteket lásd a Változáslistában!)",
 		"description" : "Credits body"
 	},
 	"settings_content_warning_header" : 
