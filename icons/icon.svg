@@ -13,9 +13,9 @@
    id="Unicode"
    inkscape:version="0.91 r13725"
    sodipodi:docname="icon.svg"
-   inkscape:export-filename="F:\Web\Opera\addon\Zoom Slider 1.0\icons\icon16.png"
-   inkscape:export-xdpi="11.25"
-   inkscape:export-ydpi="11.25">
+   inkscape:export-filename="F:\Web\Opera\addon\Zoom Slider 1.2\icons\icon128.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -44,8 +44,8 @@
      id="namedview10"
      showgrid="true"
      inkscape:zoom="4.0546875"
-     inkscape:cx="40.979603"
-     inkscape:cy="63.506744"
+     inkscape:cx="32.684606"
+     inkscape:cy="63.260116"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -75,7 +75,7 @@
      x="60"
      y="32" />
   <rect
-     style="opacity:1;fill:none;fill-opacity:1;stroke:#cc0000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#ff00ff;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect4145"
      width="32"
      height="8"

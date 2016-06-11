@@ -14,6 +14,11 @@
 		"message" : "Zoom Csúszka",
 		"description" : "Manifest JSON default title string"
 	},
+	"manifest_command_preset" : 
+	{
+		"message" : "Nagyítás az előre beállított értékre",
+		"description" : "Manifest JSON preset value command string"
+	},
 	"notification_install_title" : 
 	{
 		"message" : "A Zoom Csúszka beépült a böngészőbe",
@@ -39,6 +44,11 @@
 		"message" : "Alapértelmezett nagyítás",
 		"description" : "Context menu strings"
 	},
+	"context_menu_custom" :
+	{
+		"message" : "Nagyítás egyéni értékre",
+		"description" : "Context menu strings"
+	},
 	"settings_sidebar_menuitem_settings" : 
 	{
 		"message" : "Beállítások",
@@ -59,6 +69,56 @@
 		"message" : "Névjegy",
 		"description" : "Sidebar menu"
 	},
+	"settings_sidebar_menuitem_donate" : 
+	{
+		"message" : "Támogatás",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_pref_header" : 
+	{
+		"message" : "Beállítások",
+		"description" : "Preferences header"
+	},
+	"settings_content_pref_uiColor" : 
+	{
+		"message" : "Fő színvilág:",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiBlue" : 
+	{
+		"message" : "Kék",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiRed" : 
+	{
+		"message" : "Vörös",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_presetValue" : 
+	{
+		"message" : "Saját nagyítási érték (%):",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Billentyűparancsok",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_popup" : 
+	{
+		"message" : "Alt+Shift+Z az alapértelmezett billentyűkombináció az eszköztár buborék megnyitásához. (Az Esc billentyűvel tudod bezárni.)",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_preset" : 
+	{
+		"message" : "Alt+Shift+T az alapértelmezett billentyűkombináció a saját értékre történő nagyításhoz.",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Billentyűparancsok megnyitása",
+		"description" : "Shortcuts body"
+	},
 	"settings_content_incognito_header" : 
 	{
 		"message" : "Privát mód",
@@ -74,21 +134,6 @@
 		"message" : "Bővítménykezelő megnyitása",
 		"description" : "Incognito body"
 	},
-	"settings_content_shortcut_header" : 
-	{
-		"message" : "Billentyűparancsok",
-		"description" : "Shortcuts header"
-	},
-	"settings_content_shortcut_info" : 
-	{
-		"message" : "Alt+Shift+Z az alapértelmezett billentyűkombináció a buborék kinyitásához. A kombinációt meg tudod változtatni a Billentyűparancsok párbeszédablakban. (Az Esc billentyűvel pedig be tudod zárni a buborékot.)",
-		"description" : "Shortcuts body"
-	},
-	"settings_content_shortcut_manager" : 
-	{
-		"message" : "Billentyűparancsok megnyitása",
-		"description" : "Shortcuts body"
-	},
 	"settings_content_zoom_header" : 
 	{
 		"message" : "Alapértelmezett nagyítás",
@@ -96,7 +141,7 @@
 	},
 	"settings_content_zoom_info" : 
 	{
-		"message" : "A Beállítások -> Webhelyek -> Oldal nagyítása menüben meg tudod változtatni a böngésző alapértelmezett nagyítási értékét. (Ezzel minden weboldal nagyítását megváltoztatod, beleértve az oldalsáv paneleket és az eszköztár buborékokat is, de a böngésző felületét nem.)",
+		"message" : "Az alapértelmezett nagyítást a Beállítások -> Webhelyek -> Elrendezés menüben tudod megváltoztatni.",
 		"description" : "Zoom body"
 	},
 	"settings_content_zoom_manager" : 
@@ -126,7 +171,7 @@
 	},
 	"settings_content_howToUse_default" : 
 	{
-		"message" : "A lyukas gomb a böngésző alapértelmezett nagyítási értékét jelzi. Kattints rá, ha alaphelyzetbe akarod állítani a nagyítást!",
+		"message" : "Az eszköztár gombjának helyi menüjéből visszaállíthatod az alapértelmezett nagyítást.",
 		"description" : "How to use body"
 	},
 	"settings_content_notes_header" : 
@@ -159,6 +204,11 @@
 		"message" : "\"notifications\", hogy jelezni tudja, ha frissítés érkezik.",
 		"description" : "Permissions body"
 	},
+	"settings_content_permissions_storage" : 
+	{
+		"message" : "\"storage\", hogy elmentse a beállításaidat.",
+		"description" : "Permissions body"
+	},
 	"settings_content_permissions_tabs" : 
 	{
 		"message" : "\"tabs\", hogy szabályozni tudja az oldalak nagyítását.",
@@ -172,11 +222,6 @@
 	"settings_content_credits_createdBy" : 
 	{
 		"message" : "Fejlesztő:",
-		"description" : "Credits body"
-	},
-	"settings_content_credits_copyCode" : 
-	{
-		"message" : "Az általam írt kódon kívül az Opera belső lapjait felépítő kódok egy részét is felhasználtam.",
 		"description" : "Credits body"
 	},
 	"settings_content_credits_thanks" : 
@@ -201,12 +246,12 @@
 	},
 	"settings_content_license_share" : 
 	{
-		"message" : "Szabadon terjesztheted a bővítményt, de arra kérlek, hogy ne a NEX fájlt másold, hanem a letöltési oldal linkjét.",
+		"message" : "A bővítmény csak ingyenesen terjeszthető.",
 		"description" : "License body"
 	},
 	"settings_content_license_copy" : 
 	{
-		"message" : "Szabadon másolhatod és módosíthatod a bővítmény forráskódját mindaddig, amíg nem kérsz érte pénzt, és megfelelően hivatkozol a forrásra.",
+		"message" : "A forráskód szabadon felhasználható az eredeti szerző megjelölése mellett.",
 		"description" : "License body"
 	},
 	"settings_content_contact_header" : 
@@ -228,5 +273,15 @@
 	{
 		"message" : "Email",
 		"description" : "Contact body"
+	},
+	"settings_content_donate_header" : 
+	{
+		"message" : "Támogatás",
+		"description" : "Donate header"
+	},
+	"settings_content_donate_text" : 
+	{
+		"message" : "A bővítmény használata teljesen ingyenes. Ha viszont szeretnél hozzájárulni a fejlesztéshez némi pénzzel, akkor az alábbi képre kattintva adományozhatsz a PayPal rendszerén keresztül. (Használhatsz PayPal fiókot vagy bankkártyát.)",
+		"description" : "Donate body"
 	}
 }

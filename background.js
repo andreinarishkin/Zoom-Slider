@@ -3,8 +3,19 @@ chrome.runtime.onInstalled.addListener(function(details)
 {
 	if (details.reason === "install" || details.reason === "update")
 	{
+		// build user preferences
+		chrome.storage.local.get(null, function(saved)
+		{
+			chrome.storage.local.set(
+			{
+				presetValue : (saved.presetValue != undefined) ? saved.presetValue : 200,
+				uiColor : (saved.uiColor != undefined) ? saved.uiColor : "blue"
+			});
+		});
+		
 		// insert context menu items into browserAction
 		chrome.contextMenus.create({type: "normal", id: "zoom_slider.reset", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_reset")});
+		chrome.contextMenus.create({type: "normal", id: "zoom_slider.custom", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_custom")});
 		chrome.contextMenus.create({type: "separator", id: "zoom_slider.separator", contexts: ["browser_action"]});
 		
 		// check if it needs to be disabled
@@ -40,6 +51,13 @@ chrome.contextMenus.onClicked.addListener(function(info, tab)
 			chrome.tabs.setZoom(zoomSettings.defaultZoomFactor);
 		});
 	}
+	else if (info.menuItemId === "zoom_slider.custom")
+	{
+		chrome.storage.local.get("presetValue", function(settings)
+		{
+			chrome.tabs.setZoom(settings.presetValue / 100);
+		});
+	}
 });
 
 // disable browserAction on pages where extensions are not allowed to run
@@ -54,16 +72,19 @@ function handleButton()
 			{ // Opera addon catalog
 				chrome.browserAction.disable(tabs[0].id);
 				chrome.contextMenus.update("zoom_slider.reset", {enabled: false});
+				chrome.contextMenus.update("zoom_slider.custom", {enabled: false});
 			}
 			else if (protocol === "opera" || protocol === "chrome" || protocol === "browser" || protocol === "about" || protocol === "chrome-extension" || protocol === "chrome-devtools")
 			{ // internal pages
 				chrome.browserAction.disable(tabs[0].id);
 				chrome.contextMenus.update("zoom_slider.reset", {enabled: false});
+				chrome.contextMenus.update("zoom_slider.custom", {enabled: false});
 			}
 			else
 			{
 				chrome.browserAction.enable(tabs[0].id);
 				chrome.contextMenus.update("zoom_slider.reset", {enabled: true});
+				chrome.contextMenus.update("zoom_slider.custom", {enabled: true});
 			}
 		}
 	});
@@ -111,3 +132,39 @@ chrome.tabs.onZoomChange.addListener(function(zoomChangeInfo) // zooming initiat
 {
 	getZoom();
 });
+
+// catch preset custom value shortcut
+chrome.commands.onCommand.addListener(function(command)
+{
+	if (command === "preset_custom_value")
+	{
+		chrome.storage.local.get("presetValue", function(settings)
+		{
+			chrome.tabs.setZoom(settings.presetValue / 100);
+		});
+	}
+});
+
+// catch change in user settings
+chrome.storage.onChanged.addListener(function(changes, areaName)
+{
+	if (changes.uiColor)
+	{
+		var hex = (changes.uiColor.newValue === "blue") ? "#ff00ff" : "#cc0000";
+		chrome.browserAction.setBadgeBackgroundColor({color: hex});
+	}
+});
+
+// stuff to do on extension load
+window.addEventListener("load", function()
+{
+	chrome.storage.local.get("uiColor", function(settings)
+	{
+		try // storage.onChanged will fire later
+		{
+			var hex = (settings.uiColor === "blue") ? "#ff00ff" : "#cc0000";
+			chrome.browserAction.setBadgeBackgroundColor({color: hex});
+		}
+		catch (e){}
+	});
+}, false);

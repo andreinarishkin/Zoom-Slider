@@ -17,6 +17,12 @@ function setZoom(value)
 // stuff to do on popup load
 window.addEventListener("DOMContentLoaded", function()
 {
+	// get UI color
+	chrome.storage.local.get("uiColor", function(settings)
+	{
+		document.body.className = settings.uiColor;
+	});
+	
 	// get the default zoom level and set it on the slider
 	chrome.tabs.getZoomSettings(function(zoomSettings)
 	{

@@ -14,6 +14,11 @@
 		"message" : "Zoom Slider",
 		"description" : "Manifest JSON default title string"
 	},
+	"manifest_command_preset" : 
+	{
+		"message" : "Zoom to a value set on the extension settings page",
+		"description" : "Manifest JSON preset value command string"
+	},
 	"notification_install_title" : 
 	{
 		"message" : "Zoom Slider has been installed",
@@ -39,6 +44,11 @@
 		"message" : "Reset to default",
 		"description" : "Context menu strings"
 	},
+	"context_menu_custom" :
+	{
+		"message" : "Zoom to custom value",
+		"description" : "Context menu strings"
+	},
 	"settings_sidebar_menuitem_settings" : 
 	{
 		"message" : "Settings",
@@ -59,6 +69,56 @@
 		"message" : "Credits",
 		"description" : "Sidebar menu"
 	},
+	"settings_sidebar_menuitem_donate" : 
+	{
+		"message" : "Donate",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_pref_header" : 
+	{
+		"message" : "Preferences",
+		"description" : "Preferences header"
+	},
+	"settings_content_pref_uiColor" : 
+	{
+		"message" : "Interface main color:",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiBlue" : 
+	{
+		"message" : "Blue",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiRed" : 
+	{
+		"message" : "Red",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_presetValue" : 
+	{
+		"message" : "Custom zoom value (%):",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Shortcuts",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_popup" : 
+	{
+		"message" : "Alt+Shift+Z is the default shortcut to open the toolbar popup. (Esc is the default shortcut to close it.)",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_preset" : 
+	{
+		"message" : "Alt+Shift+T is the default shortcut to zoom to the custom value.",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Open Keyboard shortcut manager",
+		"description" : "Shortcuts body"
+	},
 	"settings_content_incognito_header" : 
 	{
 		"message" : "Private mode",
@@ -74,21 +134,6 @@
 		"message" : "Open Extension manager",
 		"description" : "Incognito body"
 	},
-	"settings_content_shortcut_header" : 
-	{
-		"message" : "Shortcuts",
-		"description" : "Shortcuts header"
-	},
-	"settings_content_shortcut_info" : 
-	{
-		"message" : "Alt+Shift+Z is the default shortcut to open the popup. You can change it in the Keyboard shortcuts dialog. (Esc is the default shortcut to close the popup.)",
-		"description" : "Shortcuts body"
-	},
-	"settings_content_shortcut_manager" : 
-	{
-		"message" : "Open Keyboard shortcut manager",
-		"description" : "Shortcuts body"
-	},
 	"settings_content_zoom_header" : 
 	{
 		"message" : "Default zoom level",
@@ -96,7 +141,7 @@
 	},
 	"settings_content_zoom_info" : 
 	{
-		"message" : "You can set the default zoom level of the browser in Settings -> Websites -> Page zoom. (It will change the zoom level of every site, including sidebar panels and toolbar popups, but not the UI itself.)",
+		"message" : "You can set the default zoom level of the browser in Settings -> Websites -> Display.",
 		"description" : "Zoom body"
 	},
 	"settings_content_zoom_manager" : 
@@ -121,12 +166,12 @@
 	},
 	"settings_content_howToUse_mouse" : 
 	{
-		"message" : "When the popup is open, you can also use your mouse to move the slider, or scroll the wheel over the popup.",
+		"message" : "When the popup is open, you can also use your mouse to move the slider, or scroll with the wheel over the popup.",
 		"description" : "How to use body"
 	},
 	"settings_content_howToUse_default" : 
 	{
-		"message" : "The hollow button indicates the default zoom level of the browser. Click on it to reset zoom to default!",
+		"message" : "You can use the context menu of the toolbar button to reset zoom to default.",
 		"description" : "How to use body"
 	},
 	"settings_content_notes_header" : 
@@ -159,6 +204,11 @@
 		"message" : "\"notifications\" to use notifications to inform you about updates.",
 		"description" : "Permissions body"
 	},
+	"settings_content_permissions_storage" : 
+	{
+		"message" : "\"storage\" to save your settings.",
+		"description" : "Permissions body"
+	},
 	"settings_content_permissions_tabs" : 
 	{
 		"message" : "\"tabs\" to control zoom level.",
@@ -172,11 +222,6 @@
 	"settings_content_credits_createdBy" : 
 	{
 		"message" : "Developed by",
-		"description" : "Credits body"
-	},
-	"settings_content_credits_copyCode" : 
-	{
-		"message" : "Besides my own coding I use some layout and style from the internal pages made by Opera Software ASA.",
 		"description" : "Credits body"
 	},
 	"settings_content_credits_thanks" : 
@@ -201,12 +246,12 @@
 	},
 	"settings_content_license_share" : 
 	{
-		"message" : "You can share this extension, but I ask you to link the download page instead of copying the NEX file.",
+		"message" : "You can only share this extension for free.",
 		"description" : "License body"
 	},
 	"settings_content_license_copy" : 
 	{
-		"message" : "You can copy and modify the code of this extension as long as it's free and you use the proper credits.",
+		"message" : "You can use the source code with the proper reference to the original author.",
 		"description" : "License body"
 	},
 	"settings_content_contact_header" : 
@@ -228,5 +273,15 @@
 	{
 		"message" : "Email",
 		"description" : "Contact body"
+	},
+	"settings_content_donate_header" : 
+	{
+		"message" : "Donate",
+		"description" : "Donate header"
+	},
+	"settings_content_donate_text" : 
+	{
+		"message" : "This extension is completely free to use. However, if you want to contribute with a small amount of money, you can click on the image below to donate via PayPal. (You can use either a PayPal account or a credit card.)",
+		"description" : "Donate body"
 	}
 }

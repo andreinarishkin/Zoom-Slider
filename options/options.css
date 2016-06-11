@@ -97,3 +97,12 @@ margin: 0 0 10px 0;}
 
 section a {
 margin: 0 0 10px 0;}
+
+section form {
+line-height: 200%;}
+
+section form#pp {
+text-align: center;}
+
+section form input, section form select {
+padding: 2px;}

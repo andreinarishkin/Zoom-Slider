@@ -1,14 +1,10 @@
 {
 	"name": "__MSG_manifest_name__",
-	"developer": 
-	{
-		"name" : "Nekomajin",
-		"url" : "http://tothrobert.ininet.hu"
-	},
+	"author" : "Nekomajin",
 	"description" : "__MSG_manifest_description__",
 	"default_locale": "en",
 	"manifest_version" : 2,
-	"version" : "1.1.4",
+	"version" : "1.2",
 	"background" : 
 	{
 		"scripts" : ["background.js"],
@@ -24,7 +20,14 @@
 	{
 		"_execute_browser_action" :
 		{
-			"suggested_key" : {"default" : "Alt+Shift+Z"}
+			"suggested_key" : {"default" : "Alt+Shift+Z"},
+			"description" : "Open the toolbar popup"
+		},
+		"preset_custom_value" :
+		{
+			"suggested_key" : {"default" : "Alt+Shift+T"},
+			"description" : "__MSG_manifest_command_preset__",
+			"global" : false
 		}
 	},
 	"icons" : 
@@ -47,6 +50,7 @@
 	[
 		"contextMenus",
 		"notifications",
+		"storage",
 		"tabs"
 	],
 	"content_security_policy": "script-src 'self'; object-src 'self';"

@@ -1,6 +1,23 @@
 // stuff to do on page load
 window.addEventListener("DOMContentLoaded", function()
 {
+	// load user settings
+	chrome.storage.local.get(null, function(settings)
+	{
+		document.getElementById("preset-value").value = settings.presetValue;
+		document.getElementById("ui-color").value = settings.uiColor;
+	});
+	
+	// save user settings
+	document.querySelector("#user-pref").addEventListener("change", function()
+	{
+		chrome.storage.local.set(
+		{
+			presetValue : parseInt(document.getElementById("preset-value").value, 10),
+			uiColor : document.getElementById("ui-color").value
+		});
+	}, false);
+	
 	// load subpage from URL hash
 	var hash = (location.hash) ? location.hash : "#settings";
 	document.querySelector(hash).classList.add("visible");
@@ -9,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function()
 	// load local language
 	var elements = document.querySelectorAll("[data-i18n]");
 	var text;
-	for (var i = 0; i < elements.length; i++)
+	for (var i=0; i<elements.length; i++)
 	{
 		text = document.createTextNode(chrome.i18n.getMessage(elements[i].dataset.i18n));
 		elements[i].insertBefore(text, elements[i].firstChild);

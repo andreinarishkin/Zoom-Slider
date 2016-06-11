@@ -17,19 +17,34 @@
 				<li><a href="#help" data-i18n="settings_sidebar_menuitem_help" id="help-nav"></a></li>
 				<li><a href="#changelog" data-i18n="settings_sidebar_menuitem_changelog" id="changelog-nav"></a></li>
 				<li><a href="#credits" data-i18n="settings_sidebar_menuitem_credits" id="credits-nav"></a></li>
+				<li><a href="#donate" data-i18n="settings_sidebar_menuitem_donate"  id="donate-nav"></a></li>
 			</ul>
 		</nav>
 		<main>
 			<article id="settings">
 				<section>
-					<h2 data-i18n="settings_content_incognito_header"></h2>
-					<p data-i18n="settings_content_incognito_info"></p>
-					<p><a id="ext" href="opera://extensions" target="_blank" data-i18n="settings_content_incognito_extensions"></a></p>
+					<h2 data-i18n="settings_content_pref_header"></h2>
+					<form id="user-pref">
+						<label for="ui-color" data-i18n="settings_content_pref_uiColor"></label>
+						<select id="ui-color">
+							<option value="blue" data-i18n="settings_content_pref_uiBlue"></option>
+							<option value="red" data-i18n="settings_content_pref_uiRed"></option>
+						</select><br />
+						<label for="preset-value" data-i18n="settings_content_pref_presetValue"></label> <input id="preset-value" type="number" min="20" max="500" step="1" />
+					</form>
 				</section>
 				<section>
 					<h2 data-i18n="settings_content_shortcut_header"></h2>
-					<p data-i18n="settings_content_shortcut_info"></p>
+					<ul>
+						<li data-i18n="settings_content_shortcut_popup"></li>
+						<li data-i18n="settings_content_shortcut_preset"></li>
+					</ul>
 					<p><a id="keys" href="opera://settings/configureCommands" target="_blank" data-i18n="settings_content_shortcut_manager"></a></p>
+				</section>
+				<section>
+					<h2 data-i18n="settings_content_incognito_header"></h2>
+					<p data-i18n="settings_content_incognito_info"></p>
+					<p><a id="ext" href="opera://extensions" target="_blank" data-i18n="settings_content_incognito_extensions"></a></p>
 				</section>
 				<section>
 					<h2 data-i18n="settings_content_zoom_header"></h2>
@@ -59,11 +74,21 @@
 					<ul>
 						<li data-i18n="settings_content_permissions_contextMenus"></li>
 						<li data-i18n="settings_content_permissions_notifications"></li>
+						<li data-i18n="settings_content_permissions_storage"></li>
 						<li data-i18n="settings_content_permissions_tabs"></li>
 					</ul>
 				</section>
 			</article>
 			<article id="changelog">
+				<section>
+					<h2>v1.2 (2016. 06. 11.)</h2>
+					<ul>
+						<li>ADD: Shortcut and context menu item to quick zoom to a custom value</li>
+						<li>ADD: Option to contribute via PayPal (still free to use)</li>
+						<li>CHANGE: Red main color to blue (ADD: option to use red color)</li>
+						<li>CHANGE: Simplify settings page</li>
+					</ul>
+				</section>
 				<section>
 					<h2>v1.1.5 (2016. 03. 06.)</h2>
 					<ul>
@@ -121,7 +146,6 @@
 					<h2 data-i18n="settings_content_credits_header"></h2>
 					<ul>
 						<li data-i18n="settings_content_credits_createdBy"> <a href="http://tothrobert.ininet.hu" target="_blank">Tóth Róbert</a></li>
-						<li data-i18n="settings_content_credits_copyCode"></li>
 						<li data-i18n="settings_content_credits_thanks"></li>
 					</ul>
 				</section>
@@ -141,10 +165,21 @@
 				<section>
 					<h2 data-i18n="settings_content_contact_header"></h2>
 					<ul>
-						<li><a href="https://addons.opera.com/en/extensions/details/zoom-silder/" target="_blank" data-i18n="settings_content_contact_feedback1"></a></li>
+						<li><a href="https://addons.opera.com/extensions/details/zoom-slider/" target="_blank" data-i18n="settings_content_contact_feedback1"></a></li>
 						<li><a href="https://github.com/Nekomajin42/Zoom-Slider" target="_blank" data-i18n="settings_content_contact_feedback2"></a></li>
 						<li><a href="mailto:nekomajin42@gmail.com" target="_blank" data-i18n="settings_content_contact_email"></a></li>
 					</ul>
+				</section>
+			</article>
+			<article id="donate">
+				<section>
+					<h2 data-i18n="settings_content_donate_header"></h2>
+					<p data-i18n="settings_content_donate_text"></p>
+					<form id="pp" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="S44LSNCT5QVBG">
+						<input type="image" src="pp.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					</form>
 				</section>
 			</article>
 		</main>
