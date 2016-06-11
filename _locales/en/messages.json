@@ -69,9 +69,9 @@
 		"message" : "Credits",
 		"description" : "Sidebar menu"
 	},
-	"settings_sidebar_menuitem_donate" : 
+	"settings_sidebar_menuitem_contribute" : 
 	{
-		"message" : "Donate",
+		"message" : "Contribute",
 		"description" : "Sidebar menu"
 	},
 	"settings_content_pref_header" : 

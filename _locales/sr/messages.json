@@ -14,6 +14,11 @@
 		"message" : "Zoom Slider",
 		"description" : "Manifest JSON default title string"
 	},
+	"manifest_command_preset" : 
+	{
+		"message" : "Zoom to a value set on the extension settings page",
+		"description" : "Manifest JSON preset value command string"
+	},
 	"notification_install_title" : 
 	{
 		"message" : "Zoom Slider је инсталиран",
@@ -39,6 +44,11 @@
 		"message" : "Врати на подразумевано",
 		"description" : "Context menu strings"
 	},
+	"context_menu_custom" :
+	{
+		"message" : "Zoom to custom value",
+		"description" : "Context menu strings"
+	},
 	"settings_sidebar_menuitem_settings" : 
 	{
 		"message" : "Подешавања",
@@ -59,6 +69,56 @@
 		"message" : "Заслуге",
 		"description" : "Sidebar menu"
 	},
+	"settings_sidebar_menuitem_contribute" : 
+	{
+		"message" : "Contribute",
+		"description" : "Sidebar menu"
+	},
+	"settings_content_pref_header" : 
+	{
+		"message" : "Preferences",
+		"description" : "Preferences header"
+	},
+	"settings_content_pref_uiColor" : 
+	{
+		"message" : "Interface main color:",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiBlue" : 
+	{
+		"message" : "Blue",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_uiRed" : 
+	{
+		"message" : "Red",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_pref_presetValue" : 
+	{
+		"message" : "Custom zoom value (%):",
+		"description" : "Prefenreces body"
+	},
+	"settings_content_shortcut_header" : 
+	{
+		"message" : "Пречице",
+		"description" : "Shortcuts header"
+	},
+	"settings_content_shortcut_popup" : 
+	{
+		"message" : "Alt+Shift+Z is the default shortcut to open the toolbar popup. (Esc is the default shortcut to close it.)",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_preset" : 
+	{
+		"message" : "Alt+Shift+T is the default shortcut to zoom to the custom value.",
+		"description" : "Shortcuts body"
+	},
+	"settings_content_shortcut_manager" : 
+	{
+		"message" : "Отвори Тастерске пречице",
+		"description" : "Shortcuts body"
+	},
 	"settings_content_incognito_header" : 
 	{
 		"message" : "Приватни режим",
@@ -74,21 +134,6 @@
 		"message" : "Отвори Управљач проширењима",
 		"description" : "Incognito body"
 	},
-	"settings_content_shortcut_header" : 
-	{
-		"message" : "Пречице",
-		"description" : "Shortcuts header"
-	},
-	"settings_content_shortcut_info" : 
-	{
-		"message" : "Alt+Shift+Z је подразумевана пречица за отварање искачућег прозора. Можете је променити у управљачу тастерским пречицама (Esc је подразумевана пречица за затварање искачућег прозора).",
-		"description" : "Shortcuts body"
-	},
-	"settings_content_shortcut_manager" : 
-	{
-		"message" : "Отвори Тастерске пречице",
-		"description" : "Shortcuts body"
-	},
 	"settings_content_zoom_header" : 
 	{
 		"message" : "Подразумевани ниво зумирања",
@@ -96,7 +141,7 @@
 	},
 	"settings_content_zoom_info" : 
 	{
-		"message" : "Можете подесити подразумевани ниво зумирања прегледача у Подешавања -> Веб локација -> Зумирање странице (то ће променити ниво зумирања сваке странице, укључујући панеле бочне траке и искачуће прозоре алатне траке, али не и самог корисничког окружења).",
+		"message" : "Можете подесити подразумевани ниво зумирања прегледача у Подешавања -> Веб локација -> Зумирање странице.",
 		"description" : "Zoom body"
 	},
 	"settings_content_zoom_manager" : 
@@ -126,7 +171,7 @@
 	},
 	"settings_content_howToUse_default" : 
 	{
-		"message" : "Шупље дугме указује на подразумевани ниво зумирања прегледача. Клик на њега враћа зумирање на подразумевано!",
+		"message" : "You can use the context menu of the toolbar button to reset zoom to default.",
 		"description" : "How to use body"
 	},
 	"settings_content_notes_header" : 
@@ -159,6 +204,11 @@
 		"message" : "\"notifications\" за коришћење обавештења о ажурирањима.",
 		"description" : "Permissions body"
 	},
+	"settings_content_permissions_storage" : 
+	{
+		"message" : "\"storage\" to save your settings.",
+		"description" : "Permissions body"
+	},
 	"settings_content_permissions_tabs" : 
 	{
 		"message" : "\"tabs\" за контролу нивоа зумирања.",
@@ -172,11 +222,6 @@
 	"settings_content_credits_createdBy" : 
 	{
 		"message" : "Аутор:",
-		"description" : "Credits body"
-	},
-	"settings_content_credits_copyCode" : 
-	{
-		"message" : "Поред мог сопственог кодирања, користио сам распоред и стил интерних страница Opera прегледача.",
 		"description" : "Credits body"
 	},
 	"settings_content_credits_thanks" : 
@@ -201,12 +246,12 @@
 	},
 	"settings_content_license_share" : 
 	{
-		"message" : "Можете делити ово проширење али вас молим да остављате везу до странице за преузимање уместо копирања NEX датотеке.",
+		"message" : "You can only share this extension for free.",
 		"description" : "License body"
 	},
 	"settings_content_license_copy" : 
 	{
-		"message" : "Можете копирати и мењати код овог проширења докле год је бесплатан и прописно упућујете на извор.",
+		"message" : "You can use the source code with the proper reference to the original author.",
 		"description" : "License body"
 	},
 	"settings_content_contact_header" : 
@@ -228,5 +273,15 @@
 	{
 		"message" : "Е-пошта",
 		"description" : "Contact body"
+	},
+	"settings_content_donate_header" : 
+	{
+		"message" : "Donate",
+		"description" : "Donate header"
+	},
+	"settings_content_donate_text" : 
+	{
+		"message" : "This extension is completely free to use. However, if you want to contribute with a small amount of money, you can click on the image below to donate via PayPal. (You can use either a PayPal account or a credit card.)",
+		"description" : "Donate body"
 	}
 }

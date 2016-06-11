@@ -69,7 +69,7 @@
 		"message" : "Névjegy",
 		"description" : "Sidebar menu"
 	},
-	"settings_sidebar_menuitem_donate" : 
+	"settings_sidebar_menuitem_contribute" : 
 	{
 		"message" : "Támogatás",
 		"description" : "Sidebar menu"
@@ -274,14 +274,14 @@
 		"message" : "Email",
 		"description" : "Contact body"
 	},
-	"settings_content_donate_header" : 
+	"settings_content_contribute_header" : 
 	{
 		"message" : "Támogatás",
-		"description" : "Donate header"
+		"description" : "Contribute header"
 	},
-	"settings_content_donate_text" : 
+	"settings_content_contribute_text" : 
 	{
 		"message" : "A bővítmény használata teljesen ingyenes. Ha viszont szeretnél hozzájárulni a fejlesztéshez némi pénzzel, akkor az alábbi képre kattintva adományozhatsz a PayPal rendszerén keresztül. (Használhatsz PayPal fiókot vagy bankkártyát.)",
-		"description" : "Donate body"
+		"description" : "Contribute body"
 	}
 }
