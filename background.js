@@ -9,35 +9,39 @@ chrome.runtime.onInstalled.addListener(function(details)
 			chrome.storage.local.set(
 			{
 				presetValue : (saved.presetValue != undefined) ? saved.presetValue : 200,
-				uiColor : (saved.uiColor != undefined) ? saved.uiColor : "blue"
+				uiColor : (saved.uiColor != undefined) ? saved.uiColor : "red"
 			});
 		});
 		
 		// insert context menu items into browserAction
 		chrome.contextMenus.create({type: "normal", id: "zoom_slider.reset", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_reset")});
 		chrome.contextMenus.create({type: "normal", id: "zoom_slider.custom", contexts: ["browser_action"], title: chrome.i18n.getMessage("context_menu_custom")});
-		chrome.contextMenus.create({type: "separator", id: "zoom_slider.separator", contexts: ["browser_action"]});
-		
-		// check if it needs to be disabled
-		handleButton();
-		getZoom();
+		chrome.contextMenus.create({type: "separator", id: "zoom_slider.separator", contexts: ["browser_action"]}, function()
+		{
+			getZoom(); // display zoom value
+			handleButton(); // check if the button needs to be disabled
+		});
 		
 		// throw notification
-		var title = chrome.i18n.getMessage("notification_" + details.reason + "_title");
-		var body = chrome.i18n.getMessage("notification_" + details.reason + "_body");
 		var options = 
 		{
-			tag : "zoom_slider", 
-			dir : "auto",
-			lang : window.navigator.language,
-			icon : "icons/icon48.png", 
-			body : body
+			type : "basic",
+			title: chrome.i18n.getMessage("notification_" + details.reason + "_title"),
+			message: chrome.i18n.getMessage("notification_" + details.reason + "_body"),
+			iconUrl : "icons/icon48.png",
+			isClickable: true
 		};
-		var n = new Notification(title, options);
-		n.onclick = function()
+		chrome.notifications.create("zoom_slider", options, function(notificationID)
+		{
+			window.setTimeout(function()
+			{
+				chrome.notifications.clear("zoom_slider");
+			}, 5000);
+		});
+		chrome.notifications.onClicked.addListener(function()
 		{
 			chrome.runtime.openOptionsPage();
-		};
+		});
 	}
 });
 
@@ -150,7 +154,7 @@ chrome.storage.onChanged.addListener(function(changes, areaName)
 {
 	if (changes.uiColor)
 	{
-		var hex = (changes.uiColor.newValue === "blue") ? "#ff00ff" : "#cc0000";
+		var hex = (changes.uiColor.newValue === "blue") ? "#cc00ff" : "#cc0000";
 		chrome.browserAction.setBadgeBackgroundColor({color: hex});
 	}
 });
@@ -162,7 +166,7 @@ window.addEventListener("load", function()
 	{
 		try // storage.onChanged will fire later
 		{
-			var hex = (settings.uiColor === "blue") ? "#ff00ff" : "#cc0000";
+			var hex = (settings.uiColor === "blue") ? "#cc00ff" : "#cc0000";
 			chrome.browserAction.setBadgeBackgroundColor({color: hex});
 		}
 		catch (e){}
